@@ -44,7 +44,8 @@ public class ArrayPart_1_LiveClassSolution {
             System.out.print(element + " ");
         }
         int secondLargestIndex = secondLargestElementInAnArray(arrayOfNumberProgram4);
-        System.out.println("\nSecond Largest Element is " + arrayOfNumberProgram3[secondLargestIndex] + " at index " + secondLargestIndex);
+        if (secondLargestIndex != -1)
+            System.out.println("\nSecond Largest Element is " + arrayOfNumberProgram3[secondLargestIndex] + " at index " + secondLargestIndex);
 
         //Program5
         int arrayOfNumberProgram5[] = {2, 2, 3, 4, 4, 7, 7, 7, 7};
@@ -89,6 +90,8 @@ public class ArrayPart_1_LiveClassSolution {
         int secondLargestElementIndex = -1;
         int n = arrayOfNumberProgram4.length;
 
+        if (n < 2)
+            return -1;
         for (int i = 1; i < n; i++) {
             if (arrayOfNumberProgram4[i] > arrayOfNumberProgram4[largestElementIndex]) {
                 secondLargestElementIndex = largestElementIndex;
@@ -111,6 +114,8 @@ public class ArrayPart_1_LiveClassSolution {
     private static int largestElementInAnArray(int[] arrayOfNumberProgram3) {
         int max = 0;
         int n = arrayOfNumberProgram3.length;
+        if (n < 2)
+            return 0;
         for (int i = 0; i < n; i++) {
             if (arrayOfNumberProgram3[i] > arrayOfNumberProgram3[max]) {
                 max = i;
